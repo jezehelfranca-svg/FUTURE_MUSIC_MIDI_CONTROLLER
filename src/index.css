@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+    font-family: var(--font-sans);
+    background-color: #0d0f13;
+    color: #f1f3f5;
+  }
+
+  button,
+  [role="button"] {
+    cursor: pointer;
+  }
+
+  /* Custom studio scrollbars */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #11141a;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2b3240;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3f485b;
+  }
+}
+
+/* Precision studio fader styling */
+input[type="range"].studio-range {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+}
+
+input[type="range"].studio-range::-webkit-slider-runnable-track {
+  height: 4px;
+  border-radius: 2px;
+  background: #262c36;
+}
+
+input[type="range"].studio-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  background: #f1f3f5;
+  border: 1px solid #0d0f13;
+  margin-top: -5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  transition: transform 120ms cubic-bezier(0.16, 1, 0.3, 1), background-color 120ms ease;
+}
+
+input[type="range"].studio-range:hover::-webkit-slider-thumb {
+  background: #ffffff;
+  transform: scale(1.08);
+}
+
+input[type="range"].studio-range:focus-visible::-webkit-slider-thumb {
+  outline: 2px solid #e11d48;
+  outline-offset: 2px;
+}

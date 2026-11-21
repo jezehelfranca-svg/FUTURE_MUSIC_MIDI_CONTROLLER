@@ -1,0 +1,6 @@
+{
+  "name": "MPK Studio IV",
+  "description": "Interactive Akai MPK MK4 compatible MIDI controller, MPC drum sampler, and multi-track DAW workstation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
